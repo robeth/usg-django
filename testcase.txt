@@ -1,0 +1,491 @@
+from polls.models import User, Patient, Pregnancy, Photo, Doctor, Clinic, Officer, Serve, Works_On, Validation, Comment
+User.objects.all().delete(); Patient.objects.all().delete(); Pregnancy.objects.all().delete(); Photo.objects.all().delete(); Doctor.objects.all().delete(); Clinic.objects.all().delete(); Officer.objects.all().delete(); Serve.objects.all().delete(); Works_On.objects.all().delete(); Validation.objects.all().delete(); Comment.objects.all().delete();
+
+u1 = User(
+ktp = '1',
+username = 'user1',
+password = 'pass1',
+name = 'nama user1',
+address = 'address 1',
+email = 'email1',
+phone = '4123',
+description = 'Description 1',
+is_active = True,
+modify_timestamp = 1111,
+create_timestamp = 1111,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,
+);
+
+u2 = User(
+ktp = '2',
+username = 'user2',
+password = 'pass2',
+name = 'nama user2',
+address = 'address 2',
+email = 'email2',
+phone = '41232',
+description = 'Description 2',
+is_active = True,
+modify_timestamp = 1111,
+create_timestamp = 1111,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,
+);
+
+u3 = User(
+ktp = '3',
+username = 'user3',
+password = 'pass3',
+name = 'nama user3',
+address = 'address 3',
+email = 'email3',
+phone = '4123',
+description = 'Description 3',
+is_active = True,
+modify_timestamp = 1111,
+create_timestamp = 1111,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,
+);
+
+u4 = User(
+ktp = '4',
+username = 'user4',
+password = 'pass4',
+name = 'nama user4',
+address = 'address 4',
+email = 'email4',
+phone = '41239',
+description = 'Description 4',
+is_active = True,
+modify_timestamp = 1111,
+create_timestamp = 1111,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,
+);
+
+u5 = User(
+ktp = '5',
+username = 'user5',
+password = 'pass5',
+name = 'nama user5',
+address = 'address 5',
+email = 'email5',
+phone = '41239',
+description = 'Description 5',
+is_active = True,
+modify_timestamp = 1111,
+create_timestamp = 1111,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,
+);
+
+u1.save(); u2.save(); u3.save(); u4.save(); u5.save();
+
+p1 = Patient(
+ktp = '123',
+name = 'pasien 1',
+address = 'address 1',
+phone = 'phone 1',
+birthdate = 111,
+filename = 'filename',
+description = 'description',
+is_active = True,
+modify_timestamp = 123,
+create_timestamp = 123,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,);
+
+p2 = Patient(
+ktp = '223',
+name = 'pasien 2',
+address = 'address 2',
+phone = 'phone 2',
+birthdate = 112,
+filename = 'filename2',
+description = 'description 2',
+is_active = True,
+modify_timestamp = 123,
+create_timestamp = 123,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,);
+
+p3 = Patient(
+ktp = '323',
+name = 'pasien 3',
+address = 'address 3',
+phone = 'phone 3',
+birthdate = 113,
+filename = 'filename3',
+description = 'description3',
+is_active = True,
+modify_timestamp = 123,
+create_timestamp = 123,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,);
+
+p4 = Patient(
+ktp = '423',
+name = 'pasien 4',
+address = 'address 4',
+phone = 'phone 4',
+birthdate = 114,
+filename = 'filename4',
+description = 'description4',
+is_active = True,
+modify_timestamp = 123,
+create_timestamp = 123,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,);
+
+p5 = Patient(
+ktp = '523',
+name = 'pasien 5',
+address = 'address 5',
+phone = 'phone 5',
+birthdate = 115,
+filename = 'filename 5',
+description = 'description 5',
+is_active = True,
+modify_timestamp = 1235,
+create_timestamp = 1235,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,);
+
+p1.save(); p2.save();p3.save(); p4.save(); p5.save()
+
+pp1 = Pregnancy(
+patient = p1,
+pregnancy_number = 1,
+is_finish = True,
+is_active = True,
+modify_timestamp = 1123,
+create_timestamp = 1123,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,);
+
+pp2 = Pregnancy(
+patient = p1,
+pregnancy_number = 2,
+is_finish = True,
+is_active = True,
+modify_timestamp = 1123,
+create_timestamp = 1123,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,);
+
+pp3 = Pregnancy(
+patient = p3,
+pregnancy_number = 2,
+is_finish = True,
+is_active = True,
+modify_timestamp = 1123,
+create_timestamp = 1123,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,);
+pp1.save(); pp2.save(); pp3.save();
+
+
+doc1 = Doctor(
+user = u1,
+doctor_id = 1,
+is_active = True,
+modify_timestamp = 111,
+create_timestamp = 111,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,);
+
+doc2 = Doctor(
+user = u2,
+doctor_id = 2,
+is_active = True,
+modify_timestamp = 111,
+create_timestamp = 111,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,);
+doc1.save(); doc2.save();
+
+c1 =  Clinic(
+clinic_id = 1,
+name = 'Wailolo',
+address = 'Address 1',
+city = 'City 1',
+province = 'Province 1',
+phone = '123',
+description = 'Desc 1',
+is_active = True,
+modify_timestamp = 111,
+create_timestamp = 111,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,);
+
+c2 =  Clinic(
+clinic_id = 2,
+name = 'Wailolo',
+address = 'Address 2',
+city = 'City 2',
+province = 'Province 2',
+phone = '123',
+description = 'Desc 2',
+is_active = True,
+modify_timestamp = 111,
+create_timestamp = 111,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,);
+c1.save(); c2.save();
+
+off1 = Officer(
+user = u3,
+officer_id = 1,
+clinic = c1,
+is_active = True,
+modify_timestamp = 111,
+create_timestamp = 111,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,);
+
+off2 = Officer(
+user = u4,
+officer_id = 2,
+clinic = c2,
+is_active = True,
+modify_timestamp = 111,
+create_timestamp = 111,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,);
+
+off3 = Officer(
+user = u5,
+officer_id = 3,
+clinic = c2,
+is_active = True,
+modify_timestamp = 111,
+create_timestamp = 111,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,);
+off1.save(); off2.save(); off3.save();
+
+pho1 = Photo(
+photo_id = 1,
+pregnancy = pp1,
+photo_number = 1,
+officer = off1,
+analyze_timestamp = 123,
+filename = 'photo11.jpg',
+x = 23.9, 
+y = 43.5,
+a = 22.2,
+b = 55.1,
+tetha = 9.1,
+scale = 2,
+method = 'RHT',
+is_active = True,
+modify_timestamp = 111,
+create_timestamp = 111,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,);
+
+pho2 = Photo(
+photo_id = 2,
+pregnancy = pp2,
+photo_number = 1,
+officer = off1,
+analyze_timestamp = 123,
+filename = 'photo21.jpg',
+x = 23.9, 
+y = 43.5,
+a = 22.2,
+b = 55.1,
+tetha = 9.1,
+scale = 2,
+method = 'RHT',
+is_active = True,
+modify_timestamp = 111,
+create_timestamp = 111,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,);
+
+pho3 = Photo(
+photo_id = 3,
+pregnancy = pp3,
+photo_number = 1,
+officer=off1,
+analyze_timestamp = 123,
+filename = 'photo31.jpg',
+x = 23.9, 
+y = 43.5,
+a = 22.2,
+b = 55.1,
+tetha = 9.1,
+scale = 2,
+method = 'RHT',
+is_active = True,
+modify_timestamp = 111,
+create_timestamp = 111,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,);
+pho1.save(); pho2.save(); pho3.save();
+
+
+serve1 = Serve(
+serve_id= 1,
+clinic = c1,
+patient = p1,
+is_active = True,
+modify_timestamp = 111,
+create_timestamp = 222,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,);
+
+serve2 = Serve(
+serve_id= 2,
+clinic = c2,
+patient = p2,
+is_active = True,
+modify_timestamp = 111,
+create_timestamp = 222,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,);
+
+serve3 = Serve(
+serve_id= 3,
+clinic = c1,
+patient = p3,
+is_active = True,
+modify_timestamp = 111,
+create_timestamp = 222,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,);
+
+serve4 = Serve(
+serve_id= 4,
+clinic = c2,
+patient = p4,
+is_active = True,
+modify_timestamp = 111,
+create_timestamp = 222,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,);
+
+serve5 = Serve(
+serve_id= 5,
+clinic = c2,
+patient = p5,
+is_active = True,
+modify_timestamp = 111,
+create_timestamp = 222,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,);
+serve1.save(); serve2.save(); serve3.save(); serve4.save(); serve5.save();
+
+wo1 = Works_On(
+works_id = 1,
+doctor = doc1,
+clinic = c1,
+is_active = True,
+modify_timestamp = 111,
+create_timestamp = 222,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,);
+
+wo2 = Works_On(
+works_id = 2,
+doctor = doc1,
+clinic = c2,
+is_active = True,
+modify_timestamp = 111,
+create_timestamp = 222,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,);
+
+wo3 = Works_On(
+works_id = 3,
+doctor = doc2,
+clinic = c2,
+is_active = True,
+modify_timestamp = 111,
+create_timestamp = 222,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,);
+wo1.save(); wo2.save(); wo3.save();
+
+val1 = Validation(
+validation_id = 1,
+doctor = doc1, 
+photo = pho1,
+x = 23.9, 
+y = 43.5,
+a = 22.2,
+b = 55.1,
+tetha = 9.1,
+has_seen = False,
+is_active = True,
+modify_timestamp = 111,
+create_timestamp = 111,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,);
+
+val2 = Validation(
+validation_id = 2,
+doctor = doc1, 
+photo = pho2,
+x = 23.9, 
+y = 43.5,
+a = 22.2,
+b = 55.1,
+tetha = 9.1,
+has_seen = False,
+is_active = True,
+modify_timestamp = 111,
+create_timestamp = 111,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,);
+
+val3 = Validation(
+validation_id = 3,
+doctor = doc2, 
+photo = pho3,
+x = 23.9, 
+y = 43.5,
+a = 22.2,
+b = 55.1,
+tetha = 9.1,
+has_seen = False,
+is_active = True,
+modify_timestamp = 111,
+create_timestamp = 111,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,);
+val1.save(); val2.save(); val3.save();
+
+com1 = Comment(
+comment_id = 1,
+doctor = doc1,
+officer = off1,
+patient = p1,
+comment_number = 1,
+from_doctor = True,
+content = 'Halo pasien 1. xoxoxo',
+has_seen = False,
+is_active = True,
+modify_timestamp = 111,
+create_timestamp = 111,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,);
+
+com2 = Comment(
+comment_id = 2,
+doctor = doc2,
+officer = off2,
+patient = p2,
+comment_number = 1,
+from_doctor = True,
+content = 'Halo pasien 2. xoxoxo',
+has_seen = True,
+is_active = True,
+modify_timestamp = 111,
+create_timestamp = 111,
+server_arrival_timestamp = 1111,
+server_modify_timestamp = 1111,);
+com1.save();com2.save();
